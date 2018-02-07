@@ -10,13 +10,17 @@ package datatypes_operators.labs;
  *
  *      HINT: We will make use of the substring() method.
  */
-
+import java.util.Scanner;
 public class Exercise_03 {
 
     public static void main(String[] args) {
 
         // write code here
-
+        Scanner in = new Scanner(System.in);
+        String name = new String();
+        System.out.println("Type your name:");
+        name = in.next();
+        System.out.println(name.substring(1,name.length()) + name.substring(0,1) + "ay;");
     }
 }
 

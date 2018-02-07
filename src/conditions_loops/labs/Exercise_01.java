@@ -24,6 +24,15 @@ public class Exercise_01 {
         int number = scanner.nextInt();
 
         // write completed code here
+        if (number % 2 == 0)
+        {
+            System.out.print("EVEN");
+        }
+        else
+        {
+            System.out.print("ODD");
+
+        }
 
     }
 }

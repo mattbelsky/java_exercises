@@ -14,6 +14,24 @@ package conditions_loops.labs;
  *
  *
  */
-
+import java.util.Scanner;
 public class Exercise_05 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int upper = 0;
+        int lower = 0;
+        int sum = 0;
+        double avg = 0.0;
+
+        System.out.print("Enter a lower bound: ");
+        lower = in.nextInt();
+        System.out.print("\nEnter an upper bound: ");
+        upper = in.nextInt();
+        System.out.print("\n");
+
+        for (int i = lower; i <= upper; sum += i++);
+        avg = (double) sum / (upper - lower + 1);
+        System.out.println("The sum is: " + sum);
+        System.out.println("The average is: " + avg);
+    }
 }
