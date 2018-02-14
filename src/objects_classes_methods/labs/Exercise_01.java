@@ -15,5 +15,59 @@ package objects_classes_methods.labs;
  *      Be creative. Have some fun. Using Java objects you can model just about anything you want.
  *      Cars, animals, poker games, sports teams, trees, beers, people and so on.
  */
+class Demo {
+    public static void main(String[] args) {
+        Aircraft Cessna172 = new Aircraft("Cessna 172",1, 1, true, 4, true);
+        Airport JFK = new Airport(4, 8, true, "JFK", false);
 
+        JFK.displayStats();
+        JFK.delays(true);
+        JFK.displayStats();
+    }
+}
 
+class Aircraft {
+    private String name;
+    private int numEngines;
+    private int numWings;
+    private boolean fixedWing;
+    private int numPassengers;
+    private boolean tankFull;
+
+    public Aircraft(String name, int engines, int wings, boolean fixed, int passengers, boolean tank) {
+        this.name = name;
+        numEngines = engines;
+        numWings = wings;
+        fixedWing = fixed;
+        numPassengers = passengers;
+        tankFull = tank;
+    }
+}
+
+class Airport {
+    private int numRunways;
+    private int numTerminals;
+    private boolean controlTower;
+    private String code;
+    private boolean delaysExpected;
+
+    public Airport(int runways, int terminals, boolean tower, String code, boolean delays) {
+        this.numRunways = runways;
+        this.numTerminals = terminals;
+        this.controlTower = tower;
+        this.code = code;
+        this.delaysExpected = delays;
+    }
+
+    public void displayStats() {
+        System.out.println(code);
+        System.out.println("No. of runways: " + numRunways);
+        System.out.println("No. of terminals: " + numTerminals);
+        System.out.println("Has a control tower? " + controlTower);
+        System.out.println("Delays expected? " + delaysExpected + "\n");
+    }
+
+    public void delays(boolean d) {
+        delaysExpected = d;
+    }
+}

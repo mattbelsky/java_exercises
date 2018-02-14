@@ -7,7 +7,7 @@ package datatypes_operators.labs;
  *      element.
  *
  */
-
+import java.util.Scanner;
 public class Exercise_05{
 
     public static void main(String[] args) {
@@ -15,7 +15,16 @@ public class Exercise_05{
         int[] array = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
         // write code here
+        Scanner in = new Scanner(System.in);
+        boolean outOfBounds = true;
 
-
+        while (outOfBounds) {
+            System.out.println("Enter a number: ");
+            int index = in.nextInt();
+            if (index >= 0 && index < array.length) {
+                outOfBounds = false;
+                System.out.println(array[index]);
+            }
+        }
     }
 }
