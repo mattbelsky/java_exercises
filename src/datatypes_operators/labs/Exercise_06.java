@@ -27,7 +27,7 @@ public class Exercise_06 {
         };
 
         for (int i = 0; i < twoDArray.length; i++) {
-            for (int j = 0; j < 5; j++) {
+            for (int j = 0; j < twoDArray[i].length; j++) {
                 System.out.print(twoDArray[i][j] + " ");
             }
             System.out.println();
