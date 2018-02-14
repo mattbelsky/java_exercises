@@ -33,7 +33,7 @@ class Starship {
     }
 
     void changeSpeed(int speed) {
-        if (speed <= maxSpeed) { maxSpeed = speed; }
+        if (speed <= maxSpeed) { currentSpeed = speed; }
         else {
             System.out.println("Invalid speed -- higher than max capability.");
         }
