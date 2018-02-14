@@ -9,7 +9,19 @@ package datatypes_operators.labs;
  *      Print the results to the console.
  *
  */
+import java.util.Scanner;
 
 public class Exercise_04{
-
+    public static void main(String[] args) {
+        int[] nums = new int[10];
+        int sum = 0;
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Enter a number: ");
+            Scanner in = new Scanner(System.in);
+            nums[i] = in.nextInt();
+            sum += nums[i];
+        }
+        System.out.println();
+        System.out.println(sum);
+    }
 }
