@@ -2,23 +2,50 @@ Answer the following questions:
 
 1.) What is exception handling?
 
+the process by which code within the program catches and deals with runtime errors
+
 2.) What is the exception hierarchy? What is the difference between the Exception class and the Error class?
+
+The exception hierarchy is the set of exception & error subclasses beginning with Throwable. The Exception class and its
+subclasses handle different types of runtime errors, whereas the Error class handles errors within the JVM.
 
 3.) What is a try/catch?
 
+It is a statement where a block of code is tested for errors within the try statement and where, if said code contains
+one or more exceptions defined within the catch statement, the code within the catch block will execute.
+
 4.) What exceptions have you come across thus far?
+
+mostly IndexOutOfBounds
 
 5.) How many catch statement can you have following a try?
 
+as many as needed
+
 6.) How many try statements can you have preceding a catch?
+
+one (unless nested, in which case as many as needed)
 
 7.) What does the finally statement do in a try/catch/finally block?
 
+forces the code within the finally block to execute after try/catch
+
 8.) Can you nest exceptions? If so, when would you nest an exception?
+
+yes, when you want to handle errors with varying levels of severity with the outer try/catch handling the most severe
 
 9.) If you want to catch an ArrayIndexOutOfBounds exception and an Exception exception,
     which should you catch first? Why?
 
+ArrayIndexOutOfBounds should come first because you want to capture the more specific exception first so it can be
+better dealt with. Exception is the superclass if caught first, any exception subclasses will not execute since the
+exception has already been handled.
+
 10.) How do you rethrow and exception? Why would you rethrow an exception?
 
+A catch statement will contain the code "throw [ExceptionName]". It allows multiple handlers to handle different
+aspects of the exception.
+
 11.) What is the purpose of the throws keyword?
+
+It indicates that a method throws an exception.

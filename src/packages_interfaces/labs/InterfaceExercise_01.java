@@ -1,5 +1,7 @@
 package packages_interfaces.labs;
 
+import com.sun.xml.internal.ws.api.policy.PolicyResolver;
+
 /**
  * Interfaces Exercise 1:
  *
@@ -16,5 +18,9 @@ package packages_interfaces.labs;
  *       - A PersonalDevice interface that is extended by a iPad class and a Computer class. Two of the methods could be
  *          playMusic() and turnOff().
  */
+
+// I created the interface Vehicle which is implemented by classes Aircraft and Scooter. Further, class Jet extends Aircraft.
+
+
 
 

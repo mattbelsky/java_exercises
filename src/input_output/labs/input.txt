@@ -1,0 +1,1 @@
+Want to select text? In command mode, hit V and you'll be able to move the cursor using the arrow keys or the standard movement keys (h, k, j, l) to highlight text. This is pretty easy, but can be slow. Want to copy entire lines at a time? Use V instead of v and you'll highlight entire lines at a time. Again, you can use the movement keys to highlight additional lines.

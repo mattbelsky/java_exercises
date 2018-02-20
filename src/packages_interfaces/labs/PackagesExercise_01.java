@@ -9,3 +9,20 @@ package packages_interfaces.labs;
  *      4) Demonstrate how the the protected access modifier restricts access from package to package
  *
  */
+import packages_interfaces.labs.radio.AnalogRadio;
+import packages_interfaces.labs.television.LCDTV;
+
+class Controller {
+    public static void main(String[] args) {
+        LCDTV sony = new LCDTV();
+        sony.setPoweredOn(true);
+        // This statement will try to access a protected method and will cause an error.
+        // sony.setHdmiEnabled(true);
+
+        AnalogRadio panasonic = new AnalogRadio();
+        panasonic.setPoweredOn(true);
+        panasonic.setChannel(107.5);
+        // This statement will try to access a protected method and will cause an error.
+        // panasonic.setBandRange(2, 10000000);
+    }
+}

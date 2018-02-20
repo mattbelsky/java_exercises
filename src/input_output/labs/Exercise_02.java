@@ -12,3 +12,18 @@ package input_output.labs;
  *
  */
 
+// Creates two objects of the EncryptedDocument class to test the encryption/decryption functionality.
+class EncryptionController {
+    public static void main(String[] args) {
+        EncryptedDocument testEncryption = new EncryptedDocument("src/input_output/labs/input.txt",
+                "src/input_output/labs/output.txt", "encrypt");
+        EncryptedDocument testDecryption = new EncryptedDocument("src/input_output/labs/output.txt",
+                "src/input_output/labs/decrypted_output.txt", "decrypt");
+
+        // Reads the document "input.txt", encrypts it, and writes the result to "output.txt".
+        testEncryption.readWriteDocument();
+
+        // Reads the document "output.txt", encrypts it, and writes the result to "decrypted_output.txt".
+        testDecryption.readWriteDocument();
+    }
+}

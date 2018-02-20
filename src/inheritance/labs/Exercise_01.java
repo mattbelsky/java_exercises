@@ -23,4 +23,3 @@ package inheritance.labs;
  *
  *
  */
-

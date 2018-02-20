@@ -7,3 +7,19 @@ package exception_handling.labs;
  *
  */
 
+class Sentence {
+    public static void main(String[] args) {
+        String sentence = "Follow the yellow brick road.";
+        try {
+            for (int i = 0; i <= sentence.length(); i++) {
+                if (sentence.substring(i, i + 1).equals("!")) {
+                    System.out.println("This is exciting!");
+                }
+            }
+        }
+        catch (StringIndexOutOfBoundsException e) {
+            System.out.println("Index is beyond the length of the string.");
+        }
+    }
+}
+
