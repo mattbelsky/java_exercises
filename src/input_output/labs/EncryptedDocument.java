@@ -44,10 +44,10 @@ public class EncryptedDocument {
 
                 // Calls the "encrypt" or "decrypt" methods depending on the value of instance variable "encryptOrDecrypt".
                 if (encryptOrDecrypt.equals("encrypt")) {
-                    encrypt(c);
+                    c = encrypt(c);
                 }
                 else {
-                    decrypt(c);
+                    c = decrypt(c);
                 }
 
                 out.write(c);
@@ -74,29 +74,29 @@ public class EncryptedDocument {
 
     // Encrypts the file by replacing each instance of the specified characters with a replacement value.
     private char encrypt(char c) {
-        if (c == encryptionReplacementValues()[0]) {
-            c = encryptionReplacementValues()[1];
+        char[] charArray = encryptionReplacementValues();
+        if (c == charArray[0]) {
+            c = charArray[1];
         }
-        if (c == encryptionReplacementValues()[2]) {
-            c = encryptionReplacementValues()[3];
+        if (c == charArray[2]) {
+            c = charArray[3];
         }
         return c;
     }
 
     // Decrypts the file by replacing each instance of the specified characters with a replacement value.
     private char decrypt(char c) {
-        if (c == encryptionReplacementValues()[1]) {
-            c = encryptionReplacementValues()[0];
+        char[] charArray = encryptionReplacementValues();
+        if (c == charArray[1]) {
+            c = charArray[0];
         }
-        if (c == encryptionReplacementValues()[3]) {
-            c = encryptionReplacementValues()[2];
+        if (c == charArray[3]) {
+            c = charArray[2];
         }
         return c;
     }
 
     // Defines the list of values that will be used to replace each other in the encrypt and decrypt methods.
-    // Why doesn't this work? I initially plugged the values directly into the encrypt & decrypt
-    //  methods, and it worked then.
     private char[] encryptionReplacementValues() {
         char[] values = {'a', '-', 'e', '~'};
         return values;
